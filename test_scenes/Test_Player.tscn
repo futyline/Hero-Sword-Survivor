@@ -1,0 +1,16 @@
+[gd_scene load_steps=6 format=3 uid="uid://cgtpohwvt8sei"]
+
+[ext_resource type="PackedScene" uid="uid://c0dilf3kx0x50" path="res://systems/mob_spawner.tscn" id="2_q447h"]
+[ext_resource type="PackedScene" uid="uid://mc4t8n35dhil" path="res://player/player.tscn" id="2_yimsg"]
+[ext_resource type="PackedScene" uid="uid://cjq3kttj6mj2t" path="res://enemies/goblin.tscn" id="3_yhdxp"]
+[ext_resource type="PackedScene" uid="uid://c4nh5vojj514s" path="res://enemies/pawn.tscn" id="4_dherl"]
+[ext_resource type="PackedScene" uid="uid://b2ktldadset3x" path="res://enemies/sheep.tscn" id="5_b873n"]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2(1, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_yimsg")]
+position = Vector2(551, 359)
+
+[node name="MobSpawner" parent="." instance=ExtResource("2_q447h")]
+creatures = Array[PackedScene]([ExtResource("3_yhdxp"), ExtResource("4_dherl"), ExtResource("5_b873n")])
